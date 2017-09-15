@@ -1,4 +1,6 @@
 class Robot
+  # attr_accessor is a method called on the current class
+  # robot.attr_accessor = true or false
   attr_accessor :needs_repairs, :foreign_model, :vintage_model, :todos, :day_off
 
   def initialize
