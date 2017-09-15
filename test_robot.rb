@@ -15,7 +15,7 @@ class TestRobot < MiniTest::Test
     # act
     expect = 1
     # assert
-    assert_equal(expect, outcome)
+    assert_equal(outcome,expect)
   end
 
   def test_that_vintage_robot_needing_repairs_sent_to_station_2
@@ -28,16 +28,19 @@ class TestRobot < MiniTest::Test
     # act
     expect = 2
     # assert
-    assert_equal(expect,outcome)
+    assert_equal(outcome,expect)
   end
 
   def test_that_standard_robot_needing_repairs_sent_to_station_3
-    skip
+    # skip
     # arrange
-
+    robot = Robot.new
+    robot.needs_repairs = true
+    outcome = robot.station
     # act
-
+    expect = 3
     # assert
+    assert_equal(outcome,expect)
   end
 
   def test_that_robot_in_good_condition_sent_to_station_4
