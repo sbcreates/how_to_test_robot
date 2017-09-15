@@ -81,8 +81,8 @@ class TestRobot < MiniTest::Test
     # skip
     # arrange
     robot = Robot.new
-    robot.day_off = true
-    outcome = robot.workday?(Date.now)
+    robot.day_off = "monday"
+    outcome = robot.workday?("monday")
     # act
     expect = false
     # assert
@@ -94,7 +94,6 @@ class TestRobot < MiniTest::Test
     # arrange
 
     # act
-
     # assert
   end
 
